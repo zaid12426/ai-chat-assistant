@@ -40,7 +40,7 @@ async function streamReply({ system, messages, onText, signal }) {
   }
 
   if (provider === 'openai') {
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, baseURL: process.env.OPENAI_BASE_URL || undefined });
     const stream = await client.chat.completions.create(
       {
         model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
