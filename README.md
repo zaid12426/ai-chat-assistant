@@ -71,7 +71,7 @@ Conversation {
 **Requirements:** Node.js 18+, a MongoDB database (local, or a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster), and an Anthropic or OpenAI API key.
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/zaid12426/ai-chat-assistant
 cd ai-chat-assistant
 npm install
 cp .env.example .env      # on Windows: copy .env.example .env
