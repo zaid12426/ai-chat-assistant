@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- History Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="new-chat" id="newChatBtn">+ New chat</button>
+      <h2 class="sidebar-title">History</h2>
+      <ul class="history" id="historyList"></ul>
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle history">☰</button>
+        <h1 id="chatTitle">New chat</h1>
+
+        <!-- Tone Toggle -->
+        <div class="tone-toggle" role="radiogroup" aria-label="Response tone">
+          <button class="tone active" data-tone="professional" role="radio" aria-checked="true">Professional</button>
+          <button class="tone" data-tone="casual" role="radio" aria-checked="false">Casual</button>
+          <button class="tone" data-tone="concise" role="radio" aria-checked="false">Concise</button>
+        </div>
+      </header>
+
+      <section class="messages" id="messages">
+        <div class="empty" id="emptyState">
+          <h2>How can I help you today?</h2>
+          <p>Pick a tone above, then ask anything.</p>
+        </div>
+      </section>
+
+      <form class="composer" id="composer">
+        <textarea id="input" rows="1" placeholder="Type a message… (Enter to send, Shift+Enter for a new line)"></textarea>
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
